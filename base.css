@@ -283,10 +283,12 @@ p {
   color:white;
   font-weight:bold;
   font-size:15px;
+  margin-top:10px;
 }
 .form-label{
   margin-left:10%;
-  margin-bottom:10px;
+  margin-bottom:5px;
+  margin-top:10px;
 }
 .hyperlink{
   color: dodgerblue;
@@ -301,18 +303,20 @@ p {
   width:80%;
 }
 .form{
-  position:absolute;
-  top:50%;
-  left:50%;
+  position: absolute;
+  margin:0;
   width:250px;
-  height:500px;
-  margin-left:-125px;
-  margin-top:-250px;
   z-index:2;
   background:var(--col1);
   border:solid var(--col3) 1px;
   border-radius:10px;
   box-shadow:var(--shad-light);
+  margin: 0;
+  top: 50%;
+  left:50%;
+  margin-left:-125px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .post-content:hover {
   cursor: pointer;
