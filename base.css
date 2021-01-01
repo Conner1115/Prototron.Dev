@@ -27,6 +27,9 @@ button {
   outline: none;
   font-family: var(--font);
 }
+button:hover, [type='submit']:hover{
+  cursor:pointer;
+}
 input::placeholder {
   font-family: var(--font);
 }
@@ -250,7 +253,67 @@ p {
 #hamburger-button:hover {
   cursor: pointer;
 }
+#logo-form-img{
+  width:100px;
+  height:100px;
+  position:relative;
+  margin-top:20px;
+  left:50%;
+  margin-left:-50px;
+}
+#form-parent{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%; background:url('https://github.com/Conner1115/Prototron.Dev/blob/main/Prototron.Dev%20background.png?raw=true');
+  background-position:center;
+  background-size:cover;
+  
+}
 
+.form-submit > input{
+  margin-left:10%;
+  margin-bottom:10px;
+  width:80%;
+  background:rgb(0,175,50);
+  border:solid rgb(0,150,0) 1px;
+  border-radius:5px;
+  padding:5px;
+  color:white;
+  font-weight:bold;
+  font-size:15px;
+}
+.form-label{
+  margin-left:10%;
+  margin-bottom:10px;
+}
+.hyperlink{
+  color: dodgerblue;
+}
+.form-control > input{
+  margin-left:10%;
+  border:none;
+  box-shadow: inset 0 0 2px rgba(0,0,0,0.25);
+  padding:5px;
+  font-size:15px;
+  border-radius:5px;
+  width:80%;
+}
+.form{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:250px;
+  height:500px;
+  margin-left:-125px;
+  margin-top:-250px;
+  z-index:2;
+  background:var(--col1);
+  border:solid var(--col3) 1px;
+  border-radius:10px;
+  box-shadow:var(--shad-light);
+}
 .post-content:hover {
   cursor: pointer;
 }
@@ -324,6 +387,10 @@ p {
   animation: nav-link-hov-b 0.5s 1;
   animation-fill-mode: forwards;
   font-size: 18px;
+}
+.form-control > input:focus{
+  transition:0.25s;
+  box-shadow: inset 0 0 2px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,100,200,0.5), 0 0 0 4px rgba(0,150,255,0.5);
 }
 .nav-link:hover {
   animation: nav-link-hov 0.5s 1;
