@@ -20,12 +20,14 @@ html {
   margin: 0;
   font-family: var(--font);
   color: var(--colt);
+  background: var(--col1);
 }
 input,
 textArea,
 button {
   outline: none;
   font-family: var(--font);
+  color:var(--colt);
 }
 button:hover, [type='submit']:hover{
   cursor:pointer;
@@ -47,6 +49,32 @@ p {
   font-size: 15px;
 }
 
+#error:hover{
+  cursor:pointer;
+}
+#error{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:10px;
+  height:40px;
+  background:rgb(255,50,0);
+  color:white;
+  display:flex;
+  font-size:15px;
+}
+#error > div{
+  position:relative;
+  top:0;
+  left:0;
+  border:solid white 1px;
+  border-radius:100%;
+  width:20px;
+  height:20px;
+  text-align:center;
+  margin-right:20px;
+}
 #full-body {
   position: fixed;
   top: 70px;
@@ -289,6 +317,7 @@ p {
   margin-left:10%;
   margin-bottom:5px;
   margin-top:10px;
+  color:black;
 }
 .hyperlink{
   color: dodgerblue;
@@ -301,23 +330,27 @@ p {
   font-size:15px;
   border-radius:5px;
   width:80%;
+  color:black;
+  background:white;
 }
 .form{
   position: absolute;
   margin:0;
   width:250px;
   z-index:2;
-  background:var(--col1);
-  border:solid var(--col3) 1px;
+  background:white;
+  border:solid rgb(200,200,200) 1px;
   border-radius:10px;
-  box-shadow:var(--shad-light);
+  box-shadow:0 0 2px rgba(0,0,0,0.25);
   margin: 0;
   top: 50%;
   left:50%;
+  color:black;
   margin-left:-125px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
 .post-content:hover {
   cursor: pointer;
 }
