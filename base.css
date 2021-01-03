@@ -399,9 +399,11 @@ footer > span{
 }
 .form-label {
   margin-left: 10%;
+  margin-right:10%;
   margin-bottom: 5px;
   margin-top: 10px;
   color: black;
+  text-align:justify;
 }
 .hyperlink {
   color: dodgerblue;
