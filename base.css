@@ -54,6 +54,7 @@ p {
 footer{
   width:100%;
   height:auto;
+  min-height:350px;
   position:absolute;
   background:var(--col3);
   align-content:center;
@@ -143,6 +144,7 @@ footer > span{
 }
 #core-body{
   height:auto;
+  min-height:calc(100% - 350px);
 }
 #loader {
   position: fixed;
