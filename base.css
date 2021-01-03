@@ -27,10 +27,11 @@ textArea,
 button {
   outline: none;
   font-family: var(--font);
-  color:var(--colt);
+  color: var(--colt);
 }
-button:hover, [type='submit']:hover{
-  cursor:pointer;
+button:hover,
+[type="submit"]:hover {
+  cursor: pointer;
 }
 input::placeholder {
   font-family: var(--font);
@@ -46,34 +47,90 @@ h6 {
 p {
   padding-left: 10%;
   padding-right: 10%;
+  margin-top:10px;
+  margin-bottom:10px;
   font-size: 15px;
 }
-
-#error:hover{
-  cursor:pointer;
-}
-#error{
-  position:fixed;
-  bottom:0;
-  left:0;
+footer{
   width:100%;
-  padding:10px;
-  height:40px;
-  background:rgb(255,50,0);
-  color:white;
-  display:flex;
-  font-size:15px;
+  height:auto;
+  position:absolute;
+  background:var(--col3);
+  align-content:center;
+  justify-content:center;
 }
-#error > div{
+footer > table{
+  padding:10px;
   position:relative;
-  top:0;
-  left:0;
-  border:solid white 1px;
-  border-radius:100%;
-  width:20px;
-  height:20px;
+  margin-top:-300px;
+  height:300px;
+  width:60%;
+  margin-left:40%;
   text-align:center;
-  margin-right:20px;
+  background:var(--col3);
+}
+footer > div{
+  height:300px;
+  width:40%;
+  padding:10px;
+  background:var(--col3);
+}
+footer > span{
+  height:50px;
+  background:var(--col3);
+}
+
+#user-card-stats {
+  position: relative;
+  top: 40px;
+  left: calc(10% - 20px);
+  width: 80%;
+  height: 80%;
+  display: flex;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: var(--shad-light);
+}
+#user-card-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  box-shadow: var(--shad-light);
+}
+#user-card-background {
+  min-height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#error:hover {
+  cursor: pointer;
+}
+#error {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  height: 40px;
+  background: rgb(255, 50, 0);
+  color: white;
+  display: flex;
+  font-size: 15px;
+}
+#error > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: solid white 1px;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-right: 20px;
 }
 #full-body {
   position: fixed;
@@ -83,6 +140,9 @@ p {
   height: calc(100% - 70px);
   overflow: auto;
   background: var(col1);
+}
+#core-body{
+  height:auto;
 }
 #loader {
   position: fixed;
@@ -281,76 +341,97 @@ p {
 #hamburger-button:hover {
   cursor: pointer;
 }
-#logo-form-img{
-  width:100px;
-  height:100px;
-  position:relative;
-  margin-top:20px;
-  left:50%;
-  margin-left:-50px;
+#logo-form-img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-top: 20px;
+  left: 50%;
+  margin-left: -50px;
 }
-#form-parent{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%; background:url('https://github.com/Conner1115/Prototron.Dev/blob/main/Prototron.Dev%20background.png?raw=true');
-  background-position:center;
-  background-size:cover;
-  
+#form-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://github.com/Conner1115/Prototron.Dev/blob/main/Prototron.Dev%20background.png?raw=true");
+  background-position: center;
+  background-size: cover;
+}
+#user-nickname-stat {
+  font-size: 20px;
+  font-weight: bold;
+}
+#user-media-stats {
+  display: grid;
+  justify-content: center;
+  grid-gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
 }
 
-.form-submit > input{
-  margin-left:10%;
-  margin-bottom:10px;
-  width:80%;
-  background:rgb(0,175,50);
-  border:solid rgb(0,150,0) 1px;
-  border-radius:5px;
-  padding:5px;
-  color:white;
-  font-weight:bold;
-  font-size:15px;
-  margin-top:10px;
+.media-stat {
+  min-width: 260px;
+  max-width: 410px;
+  background: var(--col3);
+  box-shadow: var(--shad-light);
+  padding:20px;
 }
-.form-label{
-  margin-left:10%;
-  margin-bottom:5px;
-  margin-top:10px;
-  color:black;
+.u-stat {
+  margin-left: 10px;
 }
-.hyperlink{
+.form-submit > input {
+  margin-left: 10%;
+  margin-bottom: 10px;
+  width: 80%;
+  background: rgb(0, 175, 50);
+  border: solid rgb(0, 150, 0) 1px;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.form-label {
+  margin-left: 10%;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: black;
+}
+.hyperlink {
   color: dodgerblue;
 }
-.form-control > input{
-  margin-left:10%;
-  border:none;
-  box-shadow: inset 0 0 2px rgba(0,0,0,0.25);
-  padding:5px;
-  font-size:15px;
-  border-radius:5px;
-  width:80%;
-  color:black;
-  background:white;
+.form-control > input {
+  margin-left: 10%;
+  border: none;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 80%;
+  color: black;
+  background: white;
 }
-.form{
+.form {
   position: absolute;
-  margin:0;
-  width:250px;
-  z-index:2;
-  background:white;
-  border:solid rgb(200,200,200) 1px;
-  border-radius:10px;
-  box-shadow:0 0 2px rgba(0,0,0,0.25);
+  margin: 0;
+  width: 250px;
+  z-index: 2;
+  background: white;
+  border: solid rgb(200, 200, 200) 1px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
   margin: 0;
   top: 50%;
-  left:50%;
-  color:black;
-  margin-left:-125px;
+  left: 50%;
+  color: black;
+  margin-left: -125px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
 .post-content:hover {
   cursor: pointer;
 }
@@ -399,7 +480,7 @@ p {
   border-radius: 20px;
 }
 .responsive-grid {
-  display:grid;
+  display: grid;
   justify-content: center;
   grid-gap: 20px;
   padding: 20px;
@@ -425,9 +506,10 @@ p {
   animation-fill-mode: forwards;
   font-size: 18px;
 }
-.form-control > input:focus{
-  transition:0.25s;
-  box-shadow: inset 0 0 2px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,100,200,0.5), 0 0 0 4px rgba(0,150,255,0.5);
+.form-control > input:focus {
+  transition: 0.25s;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(0, 100, 200, 0.5), 0 0 0 4px rgba(0, 150, 255, 0.5);
 }
 .nav-link:hover {
   animation: nav-link-hov 0.5s 1;
@@ -451,6 +533,21 @@ p {
   animation-fill-mode: forwards;
 }
 
+@media (max-width: 600px){
+  body, html{
+    font-size:12px;
+  }
+  footer > table{
+    width:100%;
+    margin-left:0;
+    margin-top:0px;
+  }
+  footer > div{
+    width:100%;
+    height:auto;
+    text-align:center;
+  }
+}
 @media (max-width: 450px) {
   #navbar-user {
     width: 100%;
@@ -484,6 +581,7 @@ p {
     display: none;
   }
 }
+
 
 @keyframes navbar-side {
   from {
