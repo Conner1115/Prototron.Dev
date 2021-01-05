@@ -476,6 +476,7 @@ footer > span{
   border-radius: 100%;
   box-shadow: 0 0 0 2px var(--col3);
 }
+
 .post {
   min-width: 250px;
   max-width: 400px;
