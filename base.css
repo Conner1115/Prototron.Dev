@@ -320,7 +320,7 @@ footer > span {
   background: var(--col1);
   position: fixed;
   top: 70px;
-  width: 200px;
+  width: 250px;
   z-index: 6;
   box-shadow: -5px 5px 5px -5px var(--shad-col);
   border-radius: 0px 0px 0px 15px;
@@ -604,7 +604,7 @@ footer > span {
 }
 .nav-up {
   transition: 1s;
-  right: -210px;
+  right: -260px;
 }
 .nav-in {
   animation: navbar-side 1s 1;
