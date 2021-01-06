@@ -2,10 +2,11 @@
   --col1: rgb(255, 255, 255);
   --col2: rgb(240, 240, 240);
   --col3: rgb(200, 200, 200);
-  --shad-light: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  --shad-light: 0 0 5px 0 var(--shad-col);
   --font: "Rajdhani", sans-serif;
   --colt: rgb(0, 0, 0);
   --colm: cornflowerblue;
+  --shad-col: rgba(0,0,0,0.25);
 }
 
 * {
@@ -47,38 +48,38 @@ h6 {
 p {
   padding-left: 10%;
   padding-right: 10%;
-  margin-top:10px;
-  margin-bottom:10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 15px;
 }
-footer{
-  width:100%;
-  height:auto;
-  min-height:350px;
-  position:absolute;
-  background:var(--col3);
-  align-content:center;
-  justify-content:center;
+footer {
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  position: absolute;
+  background: var(--col3);
+  align-content: center;
+  justify-content: center;
 }
-footer > table{
-  padding:10px;
-  position:relative;
-  margin-top:-300px;
-  height:300px;
-  width:60%;
-  margin-left:40%;
-  text-align:center;
-  background:var(--col3);
+footer > table {
+  padding: 10px;
+  position: relative;
+  margin-top: -300px;
+  height: 300px;
+  width: 60%;
+  margin-left: 40%;
+  text-align: center;
+  background: var(--col3);
 }
-footer > div{
-  height:300px;
-  width:40%;
-  padding:10px;
-  background:var(--col3);
+footer > div {
+  height: 300px;
+  width: 40%;
+  padding: 10px;
+  background: var(--col3);
 }
-footer > span{
-  height:50px;
-  background:var(--col3);
+footer > span {
+  height: 50px;
+  background: var(--col3);
 }
 
 #user-card-stats {
@@ -139,12 +140,13 @@ footer > span{
   left: 200px;
   width: calc(100% - 200px);
   height: calc(100% - 70px);
-  overflow: auto;
-  background: var(col1);
+  overflow-y: auto;
+  overflow-x:hidden;
+
 }
-#core-body{
-  height:auto;
-  min-height:calc(100% - 350px);
+#core-body {
+  height: auto;
+  min-height: calc(100% - 350px);
 }
 #loader {
   position: fixed;
@@ -226,7 +228,7 @@ footer > span{
   left: 0;
   width: 100%;
   height: 70px;
-  box-shadow: 200px 0 5px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 200px 0 5px 0 var(--shad-col);
   z-index: 5;
 }
 #navbar {
@@ -235,7 +237,7 @@ footer > span{
   height: calc(100% - 70px);
   top: 70px;
   left: 0;
-  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 5px 0px var(--shad-col);
   z-index: 4;
   background: var(--col1);
 }
@@ -320,7 +322,7 @@ footer > span{
   top: 70px;
   width: 200px;
   z-index: 6;
-  box-shadow: -5px 5px 5px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: -5px 5px 5px -5px var(--shad-col);
   border-radius: 0px 0px 0px 15px;
 }
 #search-icon {
@@ -373,13 +375,76 @@ footer > span{
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
 }
+#new-post-form > div {
+  margin: 10px;
+}
+#post-preview-2 > .post{
+  margin:auto;
+}
+#post-content-text > h1,
+#post-content-text > h2,
+#post-content-text > h3,
+#post-content-text > h4,
+#post-content-text > h5,
+#post-content-text > h6{
+  text-align:left;
+}
+#post-content-text > p > img{
+  max-width:100%;
+}
+#post-content-text > p{
+  padding:0;
+}
+#file-upload-button{
+  position:relative;
+  left:-12.5px;
+  background:var(--col1);
+  border:var(--col3) 1px solid;
+  padding:5px;
+  border-radius:5px 0 0 5px;
+  margin-left:10%;
+  font-size:13px;
+  text-align:center;
+}
+#file-url{
+  width:70%;
+  position:relative;
+  background:var(--col1);
+  border:var(--col3) 1px solid;
+  padding:5px;
+  border-radius:0 5px 5px 0;
+  color:var(--colt);
+}
+#cover-img-label{
+  margin-left:10%;
+  width:40%;
+  border:solid var(--col3) 1px;
+  padding:5px;
+  border-radius:5px 0 0 5px;
+}
+#cover-img-value{
+  margin-left:50%;
+  width:40%;
+  border:solid var(--col3) 1px;
+  padding:5px;
+  border-radius:0 5px 5px 0;
+  
+}
 
+.post-preview{
+  width:80%;
+  margin:10%;
+  border:solid var(--colt) 1px;
+  border-radius:10px;
+  height:auto;
+  padding:20px;
+}
 .media-stat {
   min-width: 260px;
   max-width: 410px;
   background: var(--col3);
   box-shadow: var(--shad-light);
-  padding:20px;
+  padding: 20px;
 }
 .u-stat {
   margin-left: 10px;
@@ -399,11 +464,11 @@ footer > span{
 }
 .form-label {
   margin-left: 10%;
-  margin-right:10%;
+  margin-right: 10%;
   margin-bottom: 5px;
   margin-top: 10px;
   color: black;
-  text-align:justify;
+  text-align: justify;
 }
 .hyperlink {
   color: dodgerblue;
@@ -411,13 +476,25 @@ footer > span{
 .form-control > input {
   margin-left: 10%;
   border: none;
-  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 2px var(--shad-col);
   padding: 5px;
   font-size: 15px;
   border-radius: 5px;
   width: 80%;
-  color: black;
-  background: white;
+  color: var(--colt);
+  background: var(--col1);
+}
+.form-control > textArea {
+  margin-left: 10%;
+  border: none;
+  box-shadow: inset 0 0 2px var(--shad-col);
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 80%;
+  color: var(--colt);
+  background: var(--col1);
+  resize: vertical;
 }
 .form {
   position: absolute;
@@ -427,7 +504,7 @@ footer > span{
   background: white;
   border: solid rgb(200, 200, 200) 1px;
   border-radius: 10px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 2px var(--shad-col);
   margin: 0;
   top: 50%;
   left: 50%;
@@ -467,8 +544,8 @@ footer > span{
 }
 .author-name {
   margin-left: 10px;
-  text-shadow: 1px 1px 0px var(--colt), -1px 1px 0px var(--colt),
-    1px -1px 0px var(--colt), -1px -1px 0px var(--colt);
+  color:var(--colt);
+  text-shadow:0 0 3px var(--col1);
 }
 .author-img {
   width: 50px;
@@ -476,7 +553,6 @@ footer > span{
   border-radius: 100%;
   box-shadow: 0 0 0 2px var(--col3);
 }
-
 .post {
   min-width: 250px;
   max-width: 400px;
@@ -511,9 +587,10 @@ footer > span{
   animation-fill-mode: forwards;
   font-size: 18px;
 }
-.form-control > input:focus {
+.form-control > input:focus,
+.form-control > textArea:focus {
   transition: 0.25s;
-  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.25),
+  box-shadow: inset 0 0 2px var(--shad-col),
     0 0 0 1px rgba(0, 100, 200, 0.5), 0 0 0 4px rgba(0, 150, 255, 0.5);
 }
 .nav-link:hover {
@@ -538,19 +615,20 @@ footer > span{
   animation-fill-mode: forwards;
 }
 
-@media (max-width: 600px){
-  body, html{
-    font-size:12px;
+@media (max-width: 600px) {
+  body,
+  html {
+    font-size: 12px;
   }
-  footer > table{
-    width:100%;
-    margin-left:0;
-    margin-top:0px;
+  footer > table {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0px;
   }
-  footer > div{
-    width:100%;
-    height:auto;
-    text-align:center;
+  footer > div {
+    width: 100%;
+    height: auto;
+    text-align: center;
   }
 }
 @media (max-width: 450px) {
@@ -574,7 +652,7 @@ footer > span{
     left: -200px;
   }
   #navbar-top {
-    box-shadow: 0px 0 5px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0 5px 0 var(--shad-col);
   }
   #full-body {
     left: 0;
@@ -586,7 +664,6 @@ footer > span{
     display: none;
   }
 }
-
 
 @keyframes navbar-side {
   from {
@@ -624,4 +701,16 @@ footer > span{
   100% {
     transform: rotate(360deg);
   }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background:transparent;
+  border-left:solid var(--col1) 1px;
+}
+::-webkit-scrollbar-thumb {
+  background:var(--col3); 
+  border-left:solid var(--col1) 1px;
 }
