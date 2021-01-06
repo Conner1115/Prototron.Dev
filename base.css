@@ -573,9 +573,9 @@ footer > span {
 }
 .nav-link {
   overflow: hidden;
-  width: 175px;
+  width: 100%;
   background: var(--col1);
-  box-shadow: -200px 2px 0 var(--colm);
+  box-shadow: -100% 2px 0 var(--colm);
   margin-right: 25px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -683,7 +683,7 @@ footer > span {
 }
 @keyframes nav-link-hov {
   from {
-    box-shadow: -200px 2px 0 var(--colm);
+    box-shadow: -300px 2px 0 var(--colm);
   }
   to {
     box-shadow: 0px 2px 0 var(--colm);
@@ -691,7 +691,7 @@ footer > span {
 }
 @keyframes nav-link-hov-b {
   to {
-    box-shadow: -200px 2px 0 var(--colm);
+    box-shadow: -300px 2px 0 var(--colm);
   }
   from {
     box-shadow: 0px 2px 0 var(--colm);
