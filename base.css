@@ -460,6 +460,41 @@ footer > span {
   border-radius: 0 5px 5px 0;
 }
 
+.replyT{
+  display:none;
+  width:80%;
+  margin-left:10%;
+}
+.reply-button{
+  background:var(--col3);
+  border:none;
+  position:relative;
+  left:17.5%;
+  padding:5px;
+}
+.comment{
+  margin-left:10%;
+  margin-right:10%;
+  background: var(--col2);
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+.comment > p{
+  padding:none;
+}
+.comment > p > h1,
+.comment > p > h2,
+.comment > p > h3,
+.comment > p > h4,
+.comment > p > h5,
+.comment > p > h6{
+  text-align:left;
+}
+.comment > p > p > a{
+  color:dodgerblue;
+}
 .post-preview {
   width: 80%;
   margin: 10%;
